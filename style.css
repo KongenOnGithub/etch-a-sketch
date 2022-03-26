@@ -1,3 +1,19 @@
 .container {
+    width: 960px;
     display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box {
+    display: flex;
+    
+    width:960x;
+    height: 80px;
+    gap: 10px;
+}
+
+.inside {
+    width:80px;
+    background-color: greenyellow;
 }
