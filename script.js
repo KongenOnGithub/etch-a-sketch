@@ -4,9 +4,9 @@ button.addEventListener('click',newGrid);
 
 function newGrid() {
     removeAllChildNodes(container);
-    let gridSize= parseInt(prompt("what grid size would you like? you can't go over 100"));
-    if(gridSize>100){
-      gridSize= 100;
+    let gridSize= parseInt(prompt("what grid size would you like? you can't go over 100 and if you type something else it will default to 16"));
+    if(gridSize>100||gridSize===NaN){
+      gridSize= 16;
     }
     createGrid(gridSize);
 }
@@ -32,25 +32,7 @@ function createGrid(size){
         }
     }
 }
-
-for (i=0; i<16; i++) {
-    for (j=0; j<16; j++) {
-      const newDiv = document.createElement('div');
-      newDiv.classList.add(`square`, `row${i}`, `column${j}`);
-      
-      let width= (960/16)
-      newDiv.style.cssText=`height: ${width}px;`
-      container.appendChild(newDiv);
-      newDiv.addEventListener('mouseover', function(event){
-          event.target.classList.add("hovered");
-          console.log("hovered")
-        } );
-      newDiv.addEventListener('mouseout', function(event){
-          event.target.classList.remove("hovered")
-        });
-      
-    }
-}
+createGrid(16);
 
 
 function removeAllChildNodes(parent) {
