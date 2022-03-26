@@ -1,19 +1,17 @@
 .container {
     width: 960px;
-    display:flex;
-    flex-direction: column;
-    gap: 10px;
+    display:grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+
 }
 
-.box {
-    display: flex;
+.square {
+    background-color:green;
     
-    width:960x;
-    height: 80px;
-    gap: 10px;
 }
 
-.inside {
-    width:80px;
-    background-color: greenyellow;
+.hovered {
+    background-color:red;
 }
+
