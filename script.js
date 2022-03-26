@@ -12,6 +12,8 @@ function newGrid() {
 }
 
 function createGrid(size){
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     for (i=0; i<size; i++) {
         for (j=0; j<size; j++) {
           const newDiv = document.createElement('div');
